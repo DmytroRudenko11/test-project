@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  postDb:
+    image: postgres:15.4
+    container_name: postDb
+    environment:
+      POSTGRES_DB: 'postDb'
+      POSTGRES_PASSWORD: postDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./backup:/backup:rw
